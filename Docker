@@ -1,0 +1,24 @@
+1) To pull the image from docker-hub
+docker pull <image-name>
+
+2) To run the docker:
+docker run <image-name>
+
+3) To run the docker in detached mode
+docker -d run <image-name>
+
+4) Override command to run
+docker run busybox ls
+docker run busybox echo Hi Murtuza
+
+5) List **Running** containers
+docker ps
+
+6) List all containers
+docker ps -a
+
+7) To remove the container
+docker rm <CONTAINER ID | NAME>
+
+8) To remove the container forcefully (even if the container is running)
+docker rm -f <CONTAINER ID | NAME>
