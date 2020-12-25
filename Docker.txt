@@ -29,4 +29,25 @@ docker rm -f <CONTAINER ID | NAME>
 9) To remove all the containers
 docker rm -f $(docker ps -aq)
 
+10) To remove all containers, images, build cache etc (after below command images will be downloaded again)
+docker system prune
+
+11) See the docker logs, even if container is exited
+docker logs <container-id>
+
+12) Stop the running docker gracefully
+docker stop <container-id>
+
+13) Kill the running docker (Forcefully terminate and used when container is hanged or not responding)
+docker kill <container-id>
+
+14) Execute additional command 
+docker exec -it <container-id> <command>
+eg:- docker exec -it <container-id> /bin/bash
+
+15) Execute additional command along with docker run
+docker run -it busybox sh
+
+(Note:When we run -it with run then it will not execute default command)
+
 
