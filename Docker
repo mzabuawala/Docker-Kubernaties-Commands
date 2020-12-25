@@ -4,6 +4,8 @@ docker pull <image-name>
 2) To run the docker:
 docker run <image-name>
 
+[Note: docker run == (docker create <image-name> + docker start -a <container id>) commands behind the sence]
+
 3) To run the docker in detached mode
 docker -d run <image-name>
 
@@ -16,9 +18,15 @@ docker ps
 
 6) List all containers
 docker ps -a
+docker ps -aq // List only IDs
 
 7) To remove the container
 docker rm <CONTAINER ID | NAME>
 
 8) To remove the container forcefully (even if the container is running)
 docker rm -f <CONTAINER ID | NAME>
+
+9) To remove all the containers
+docker rm -f $(docker ps -aq)
+
+
