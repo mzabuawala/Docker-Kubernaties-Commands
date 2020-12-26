@@ -50,4 +50,17 @@ docker run -it busybox sh
 
 (Note:When we run -it with run then it will not execute default command)
 
+16) Build an image using the Dockerfile
+cd <to folder where Dockerfile is present> 
+docker build .
+
+
+17) Build an image using the Dockerfile and add a TAG
+docker build -t <docker-id>/<repo>:<version> .
+eg:- docker build -t mzabuawala/pgadmin4:latest .
+
+18) Build an image from running conrainer 
+docker commit -c 'CMD ["commandToExecute"]' <container-id>
+
+
 
