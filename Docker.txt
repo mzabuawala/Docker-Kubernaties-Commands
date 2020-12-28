@@ -62,5 +62,24 @@ eg:- docker build -t mzabuawala/pgadmin4:latest .
 18) Build an image from running conrainer 
 docker commit -c 'CMD ["commandToExecute"]' <container-id>
 
+================================================
+================ DOCKER COMPOSE ================
+================================================
 
+1) To run the containers using docker compose
+docker-compose up
+
+2) To build and then run the containers using docker compose
+docker-compose up --build
+
+3) To launch in detached mode
+docke-compose up -d
+
+4) To stop container
+docker-compose down
+
+5) List down the containers
+docker-compose ps
+
+(Note: we can use above command only if the current working directory has docker-compose.yml file in it)
 
