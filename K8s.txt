@@ -23,13 +23,24 @@ Development setups macOS:
 5) Start minikube
 - minikube start
 
+Note:
+-----
+In K8s, We do not create containers out of config files instead we create something called Objects, for example Pod, Service, StatufulSet, ReplicaController.
+Each object servers different purpose like running a container, monitoring a container, setting up the network etc.
+
 Commands:
 =========
 1) Check the status of minikube
 - minikube status
 - kubectl cluster-info
 
+2) Run a config file
+- kubectl apply -f <path_to_config_file>
 
+3) Get the status/details of specific object
+- kubectl get <object-type>
+eg: kubectl get pods OR kubectl get services
 
-
+4) Get the IP address of minikube, we can accress Pod using this ip address
+- minikube ip
 
