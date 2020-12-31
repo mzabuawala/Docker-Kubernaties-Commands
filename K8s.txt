@@ -1,0 +1,35 @@
+minikube: 
+---------
+This is local a Kubernetes tool which will create a node on our local machine & it focus on making it easy to learn and develop for Kubernetes.
+
+kubectl: 
+--------
+This is a program to control/manage the containers inside the node.
+
+Node:
+-----
+Node is a physical or virtual machine where we will run the containers.
+
+
+Development setups macOS:
+--------------------------
+1) Install homebrew
+2) Install kubectl
+- brew install kubectl
+3) Install VM driver for virtualbox
+- Download virtualbox from virtualbox.org
+4) Install minikube
+- brew cask install minikube
+5) Start minikube
+- minikube start
+
+Commands:
+=========
+1) Check the status of minikube
+- minikube status
+- kubectl cluster-info
+
+
+
+
+
