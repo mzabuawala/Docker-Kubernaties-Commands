@@ -23,6 +23,7 @@ Development setups macOS:
 5) Start minikube
 - minikube start
 
+
 Note:
 -----
 In K8s, We do not create containers out of config files instead we create something called Objects, for example Pod, Service, StatufulSet, ReplicaController.
@@ -43,4 +44,13 @@ eg: kubectl get pods OR kubectl get services
 
 4) Get the IP address of minikube, we can accress Pod using this ip address
 - minikube ip
+
+5) Get nodes status
+kubectl get nodes
+
+6) Get pods status
+kubectl get pods
+
+7) Stop running minikube
+- minikube stop
 
