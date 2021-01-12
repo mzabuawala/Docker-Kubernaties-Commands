@@ -97,4 +97,22 @@ kubectl get pods
 - kubectl delete <object-type> <object-name>
 - kubectl delete pod nginx
 
-
+12) To create a Pod using YAML file
+Create file: sample-pod.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    name: myapp-pod
+    country: DHD-GJ-IN
+spec:
+  containers:
+    - name: nginx-pod
+      image: nginx:alpine
+      
+# Now save the file and run it using kubectl
+- kubectl create -f ~/Documents/projects/Kubernaties-Examples/sample-pod.yaml
+# Check the status of newly created pod after above command
+- kubectl describe pod myapp-pod
