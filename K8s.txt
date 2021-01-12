@@ -10,7 +10,35 @@ Node:
 -----
 Node is a physical or virtual machine where we will run the containers.
 
+YAML:
+-----
+It is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted.
 
+# Lines starts with # will be ignored as comments
+
+1) Simplest data structure like key/value pair can be written like,
+
+<Key>:<Space><Value>
+Fruit: Apple
+
+Here space is mandatory after colon.
+
+2) Arrays can be written like,
+
+Fruits:
+-    Apple
+-    Banana
+-    Grape
+
+3) Dict/Hash can be written like,
+
+Fruits:
+    Apple: Red
+    Banana: Yellow
+    Grape: Green
+
+
+--------------------------
 Development setups macOS:
 --------------------------
 1) Install homebrew
@@ -23,14 +51,16 @@ Development setups macOS:
 5) Start minikube
 - minikube start
 
-
 Note:
 -----
 In K8s, We do not create containers out of config files instead we create something called Objects, for example Pod, Service, StatufulSet, ReplicaController.
 Each object servers different purpose like running a container, monitoring a container, setting up the network etc.
 
+
+---------
 Commands:
-=========
+---------
+
 1) Check the status of minikube
 - minikube status
 - kubectl cluster-info
@@ -62,3 +92,9 @@ kubectl get pods
 
 10) Run the pod and fetch the nginx image from DockerHub
 - kubectl run nginx --image=nginx:alpine
+
+11) Delete the pod/object
+- kubectl delete <object-type> <object-name>
+- kubectl delete pod nginx
+
+
