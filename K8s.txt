@@ -54,3 +54,11 @@ kubectl get pods
 7) Stop running minikube
 - minikube stop
 
+8) Get some extra columns like IP and Node name on which Pod is running 
+- kubectl get pods -o wide
+
+9) Get detailed description of pods
+- kubectl describe pods
+
+10) Run the pod and fetch the nginx image from DockerHub
+- kubectl run nginx --image=nginx:alpine
