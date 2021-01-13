@@ -116,3 +116,36 @@ spec:
 - kubectl create -f ~/Documents/projects/Kubernaties-Examples/sample-pod.yaml
 # Check the status of newly created pod after above command
 - kubectl describe pod myapp-pod
+
+13) To create a ReplicationController, Below is the code
+Create a file: sample-replication.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp
+spec:
+  replicas: 3
+  selector:
+    app: myapp
+  template:
+    metadata:
+      name: myapp
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: myapp-replication
+          image: nginx:alpine
+          ports:
+            - containerPort: 8080
+            
+# Now save the file and run it using kubectl
+- kubectl create -f ~/Documents/projects/Kubernaties-Examples/sample-replication.yaml
+
+# Get list of the replication controllers
+- kubectl get replicationController
+
+# Get list of the pods created by replication controllers
+- kubectl get pods
+
+14) 
