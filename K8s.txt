@@ -176,4 +176,19 @@ spec:
 18) To see all the objects using single comand
 - kubectl get all
 
+19) To update the existing deployment
+- kubectl apply -f ~/Documents/projects/Kubernaties-Examples/sample-deployment.yaml
+
+20) Check the status of rollouts in deplyment
+- kubectl rollout status deplyment/<Deployment-name>
+
+21) Check the history status of rollouts, revisions in deplyment
+- kubectl rollout history deplyment/<Deployment-name>
+
+# Note: There are two deplyment strategy
+# * ReCreate - Take down all the instance and create new instance 
+# * Rolling Update - Take one instance down at a time and create new instance to avoid any downtime
+
+22) To Rollback/Undo the changes after upgrade
+- kubectl rollout undo deployment/<Deployment-name>
 
