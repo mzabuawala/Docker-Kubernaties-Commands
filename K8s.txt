@@ -148,4 +148,32 @@ spec:
 # Get list of the pods created by replication controllers
 - kubectl get pods
 
-14) 
+14) In we want to update the replication instance when using ReplicaSet then use
+- kubectl replace -f ~/Documents/projects/Kubernaties-Examples/sample-replica-set.yaml
+# OR
+- kubectl scale --replicas=6 -f ~/Documents/projects/Kubernaties-Examples/sample-replica-set.yaml
+# OR (Without having to update the file - on the fly - adhoc)
+- kubectl scale --replicas=6 replicaset <ReplicaSet-name>
+
+15) Get list of the ReplicaSet
+- kubectl get replicaset
+
+16) Delete the ReplicaSet
+- kubectl delete replicaset <ReplicaSet-name>
+
+17) Create the Deployment
+- kubectl create -f ~/Documents/projects/Kubernaties-Examples/sample-deployment.yaml
+
+# Get list of the deployment
+- kubectl get deployment
+
+# Get list of the replication controllers created by deployment
+- kubectl get replicaset
+
+# Get list of the pods created by deployment
+- kubectl get pods
+
+18) To see all the objects using single comand
+- kubectl get all
+
+
