@@ -192,3 +192,22 @@ spec:
 22) To Rollback/Undo the changes after upgrade
 - kubectl rollout undo deployment/<Deployment-name>
 
+23) To fetch the default YAML configuration
+- kubectl create deploy --image=nginx:alpine --dry-run=client -o yaml > config.yml
+
+24) To fetch the YAML of running pod
+- kubectl get pods/<Pod-name> -o yaml
+
+25) To fetch the logs from cluster
+- kubectl logs <object>
+
+26) To scale up the replicas in deployment
+- kubectl scale deplyment/<Deployment-name> --replica=5
+
+27) To update the deployment (ad-hoc)
+- kubectl set image deplyment/<Deployment-name> nginx=nginx:1.17-alpine
+
+28) To edit the deploment on the fly, this will open VI/VIM or default editor
+- kubectl edit deplyment/<Deployment-name>
+
+
